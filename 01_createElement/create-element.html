@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+      1. document.createElement()
+      2. document.body.appendChild()
+      3. console.dir()
+      4. innerText, id, className, style
+ -->
+  <div id="root"></div>
+  <script>
+    /* Lấy ra thẻ h1 với id là root */
+    const root = document.getElementById('root')
+
+    /* Tạo ra một element h1 */
+    const h1 = document.createElement('h1')
+
+    h1.innerText = 'Hello World' // Add Text vào element
+    h1.id = 'idRoot'
+    h1.className = 'classNameRoot'
+    h1.style = 'color: green; font-size: 15px'
+
+    /* Append element h1 vào thẻ div với id là root để render UI ra màn hình */
+    root.appendChild(h1)
+
+    console.log(root) // result: <h1 id="root">Hello World</h1>
+    console.log(h1) // result: <h1></h1>
+  </script>
+</body>
+
+</html>
