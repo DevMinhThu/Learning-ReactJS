@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 function TodoList() {
-  const storageJobs = JSON.parse(localStorage.getItem("listJob") || "{}");
-  const [listJob, setListJob] = useState<string[]>(storageJobs ?? []);
+  const [listJob, setListJob] = useState<string[]>(() => {
+    const storageJobs = JSON.parse(localStorage.getItem("listJob") || "{}");
+    return storageJobs;
+  });
   const [job, setJob] = useState<string>("");
-
-  console.log("storageJobs", storageJobs);
 
   const handleChangeInput = (e: any) => {
     setJob(e.target.value);
