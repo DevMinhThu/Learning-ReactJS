@@ -22,7 +22,7 @@ function LearnUseState() {
     const totalOrders = orders.reduce(
       (total, currentValue) => total + currentValue
     );
-    console.log(totalOrders);
+    // console.log(totalOrders);
     return totalOrders;
   });
 
