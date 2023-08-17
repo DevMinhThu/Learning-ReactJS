@@ -5,10 +5,12 @@ import TryRadioButton from "./components/TryRadioButton.tsx";
 import TodoList from "./components/TodoList.tsx";
 import UseEffectHook from "./components/UseEffectHook.tsx";
 import PreviewAvatar from "./components/PreviewAvatar.tsx";
+import FakeChatApp from "./components/FakeChatApp.tsx";
 
 function App() {
   return (
     <div className="App">
+      <FakeChatApp />
       <LearnUseState />
       <PreviewAvatar />
       <TryRadioButton />
