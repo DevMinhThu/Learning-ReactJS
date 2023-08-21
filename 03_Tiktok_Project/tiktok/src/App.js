@@ -8,10 +8,20 @@ import PreviewAvatar from "./components/PreviewAvatar.tsx";
 import FakeChatApp from "./components/FakeChatApp.tsx";
 import UseLayoutEffect from "./components/UseLayoutEffect.tsx";
 import UseImperativeHandle from "./components/UseImperativeHandle.tsx";
+import Heading from "./components/Heading";
+import Paragraph from "./components/Paragraph";
+import GlobalStyles from "./components/GlobalStyles";
 
 function App() {
   return (
-    <div className="App">
+    <GlobalStyles>
+      <h1 className="heading">Learn CSS</h1>
+      <Heading />
+      <Paragraph />
+      <div className="d-flex">
+        <div>item1</div>
+        <div>item2</div>
+      </div>
       <UseImperativeHandle />
       <UseLayoutEffect />
       <FakeChatApp />
@@ -21,7 +31,7 @@ function App() {
       <TryCheckbox />
       <TodoList />
       <UseEffectHook />
-    </div>
+    </GlobalStyles>
   );
 }
 
