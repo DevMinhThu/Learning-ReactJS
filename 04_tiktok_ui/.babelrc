@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          /* 
+            VD: import App from "~/App"
+            - Sẽ hiểu là: ~ thay cho ./src => babel phân tích cú pháp và đọc cho mình
+          */
+          "~": "./src"
+        }
+      }
+    ]
+  ]
+}
+
+/* 
+  1. Đây là file cấu hình cho thư viện babel => webpack sẽ không auto nạp file này => phải cấu hình webpack trong file "config-overrides.js".
+*/
